@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="favicon" href="img/logo-js.png">
+    <title>Library JavaScript</title>
+    <link rel="stylesheet" href="css/bootstrap-5/css/bootstrap.min.css">
+    <style>
+        body{
+            background-color:beige;
+        }
+        *{
+            transition: all 300ms ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="position-sticky top-0 start-0" style="z-index: 10;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+            <img src="img/logo-js.png" alt="" width="50px">
+            <a class="navbar-brand h1" href="#">Library JavaScript</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColapseID" aria-controls="navbarColapseID" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColapseID">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-xl-3">
+                <div class="bg-warning d-flex flex-column px-4" style="position:sticky;top: 95px;left: 0;height:80vh;">
+                    <button class="w-50 m-auto my-4 btn btn-primary" id="AddBtn">Add New</button>
+                    <button class="w-50 m-auto my-4 btn btn-primary" id="LendBtn">Withdraw Now</button>
+                    <button class="w-50 m-auto my-4 btn btn-primary" id="returnBtn">Return Now</button>
+                    <button class="w-50 m-auto my-4 btn btn-primary" id="checkStatus">Check Status</button>
+                </div>
+            </div>
+            <div class="col-lg-9 col-xl-9 my-5">
+
+                <form id="addBookForm">
+                    <h1>Add New Book Section</h1>
+                    <div class="mb-3">
+                        <label for="aBookName" class="h5">Book-Name</label>
+                        <input type="text" class="form-control w-75" id="aBookName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="aBookinputID" class="h5">Book-ID</label>
+                        <input type="number" class="form-control w-75" id="aBookinputID">
+                    </div>
+                    <button type="submit" class="btn btn-danger" >Save</button>
+                </form>
+
+                <form id="lendBookForm" class="d-none">
+                    <h1>Lend Book Section</h1>
+                    <div class="mb-3">
+                        <label for="lBookinputID" class="h5">Book-ID</label>
+                        <input type="number" class="form-control w-75" id="lBookinputID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lenderName" class="h5">Person Name</label>
+                        <input type="text" class="form-control w-75" id="lenderName">
+                    </div>
+                    <button type="submit" class="btn btn-danger" >Lend Now</button>
+                </form>
+
+                <form id="returnBookForm" class="d-none">
+                    <h1>Return A Book Section</h1>
+                    <div class="mb-3">
+                        <label for="rBookinputID" class="h5">Book-ID</label>
+                        <input type="number" class="form-control w-75" id="rBookinputID">
+                    </div>
+                    <button type="submit" class="btn btn-danger" >Return Now</button>
+                </form>
+            
+
+<hr class="my-5" id="mainHr">
+
+    <!-- Display All Books -->
+    <div class="container my-5 py-5" id="completeTable">
+        <h1>Available Books</h1>
+        <table class="table overflow-auto" >
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Customize</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent">
+                <!-- Books Will come Here -->
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</div>
+</div>
+
+    <script src="css/bootstrap-5/js/bootstrap.min.js"></script>
+
+    <script src="js/JavaScript30 Library.js"></script>
+
+</body>
+
+</html>
